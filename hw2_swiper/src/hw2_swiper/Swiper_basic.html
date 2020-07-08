@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+</head>
+<head>
+  <meta charset="utf-8">
+  <title>Swiper basic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="swiper-bundle.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    
+    img{
+    	width: 100%;
+    	height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img alt="이미지1" src="images/bg1.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지2" src="images/bg2.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지3" src="images/bg3.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지4" src="images/bg4.jpeg"> </div>
+      <div class="swiper-slide"><img alt="이미지5" src="images/bg5.jpeg"> </div>
+      <div class="swiper-slide"><img alt="이미지6" src="images/bg6.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지7" src="images/bg7.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지8" src="images/bg8.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지9" src="images/bg9.jpg"> </div>
+      <div class="swiper-slide"><img alt="이미지10" src="images/bg10.jpg"> </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
