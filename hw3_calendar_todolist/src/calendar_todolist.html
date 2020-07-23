@@ -217,15 +217,15 @@ getIndex: function (node) {
 }
 };
 
-const $calBody = document.querySelector('.cal-body');
-const $btnNext = document.querySelector('.btn-cal.next');
-const $btnPrev = document.querySelector('.btn-cal.prev');
+const $calBody = document.querySelector('.cal-body');	//달력 테이블
+const $btnNext = document.querySelector('.btn-cal.next');//다음달
+const $btnPrev = document.querySelector('.btn-cal.prev');//이전달
 
 /**
 * @param {number} date
 * @param {number} dayIn
 */
-function loadDate (date, dayIn) {
+function loadDate (date, dayIn) {			//왼쪽에 날짜 요일 작성
 document.querySelector('.cal-date').textContent = date;
 document.querySelector('.cal-day').textContent = init.dayList[dayIn];
 }
@@ -244,14 +244,14 @@ if (mm === init.today.getMonth() && yy === init.today.getFullYear()) {
  markToday = init.today.getDate();
 }
 
-document.querySelector('.cal-month').textContent = init.monList[mm];
+document.querySelector('.cal-month').textContent = init.monList[mm];		//상단에 년도 월 표시
 document.querySelector('.cal-year').textContent = yy;
 
 let trtd = '';
 let startCount;
 let countDay = 0;
-for (let i = 0; i < 6; i++) {
- trtd += '<tr>';
+for (let i = 0; i < 6; i++) {				//날짜 달력표시 최대 6주까지 가능하기 때문
+ trtd += '<tr>';		
  for (let j = 0; j < 7; j++) {
    if (i === 0 && !startCount && j === firstDay.getDay()) {
      startCount = 1;
